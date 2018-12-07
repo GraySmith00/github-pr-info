@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('repos/show', {});
-});
+// Import Controllers
+const pagesController = require('../controllers/pagesController');
+const reposController = require('../controllers/reposController');
+
+// Routes
+router.get('/', pagesController.landingPage);
+
+router.get('/repo', reposController.show);
 
 module.exports = router;
