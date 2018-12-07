@@ -19,9 +19,11 @@
   "homepage": "https://github.com/GraySmith00/github-pr-info#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-ejs-layouts": "^2.5.0"
+    "express-ejs-layouts": "^2.5.0",
+    "node-fetch": "^2.3.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.7"
