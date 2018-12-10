@@ -1,10 +1,12 @@
 const fetch = require('node-fetch');
+const parse = require('parse-link-header');
 const cleanPullRequests = Symbol('cleanPullRequests');
 
 class GithubRepo {
-  constructor(owner, repo) {
+  constructor(owner, repo, page = 1) {
     this.owner = owner;
     this.repo = repo;
+    this.page = page;
   }
 
   async getPullRequests() {
@@ -12,12 +14,14 @@ class GithubRepo {
       this.repo
     }/pulls?client_id=${process.env.CLIENT_ID}&client_secret=${
       process.env.CLIENT_SECRET
-    }`;
+    }&per_page=3&page=${this.page}`;
+
     const response = await fetch(url);
+    const parsedLinkHeaders = parse(response.headers.get('link'));
     const pullRequests = await response.json();
-    const firstPage = pullRequests.slice(0, 10);
-    const cleanPRs = this[cleanPullRequests](firstPage);
-    return cleanPRs;
+    const cleanPRs = await this[cleanPullRequests](pullRequests);
+
+    return { pullRequests: cleanPRs, linkHeaders: parsedLinkHeaders };
   }
 
   [cleanPullRequests](pullRequests) {

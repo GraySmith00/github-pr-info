@@ -25,7 +25,8 @@
     "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
     "node-fetch": "^2.3.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "parse-link-header": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^5.10.0",

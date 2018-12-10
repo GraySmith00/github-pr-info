@@ -6,8 +6,14 @@ exports.show = async (req, res) => {
 
   try {
     const repo = new GithubRepo(owner, repoName);
-    const pullRequests = await repo.getPullRequests();
-    res.render('repos/show', { pullRequests, repoName, owner });
+    const { pullRequests, linkHeaders } = await repo.getPullRequests();
+
+    res.render('repos/show', {
+      pullRequests,
+      linkHeaders,
+      repoName,
+      owner
+    });
   } catch (error) {
     throw new Error(error);
   }
