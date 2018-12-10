@@ -2,9 +2,10 @@
   "name": "github-pr-info",
   "version": "1.0.0",
   "description": "A node app for displaying Github repo pull request information",
-  "main": "index.js",
+  "main": "start.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon start.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/GraySmith00/github-pr-info/issues"
   },
-  "homepage": "https://github.com/GraySmith00/github-pr-info#readme"
+  "homepage": "https://github.com/GraySmith00/github-pr-info#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
 }
