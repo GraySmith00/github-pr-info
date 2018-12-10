@@ -1,13 +1,19 @@
-<section className="landing-page">
-  <h1>Landing Page</h1>
-  <form class="url-form" action="/repo" method="GET">
-    <label for="repoUrl">Repo URL:</label>
-    <input
-      type="text"
-      name="repoUrl"
-      class="url-form__input"
-      value="https://github.com/"
-    />
-    <button class="url-form__button">Search</button>
-  </form>
+<section class="section-landing-search">
+  <div class="search">
+    <form class="search__form" action="/repo" method="GET">
+      <h2 class="heading-secondary mb-3">Search for a Repo</h2>
+      <div class="form__group">
+        <input
+          type="url"
+          name="repoUrl"
+          id="repoUrl"
+          class="form__input"
+          placeholder="https://github.com/"
+          required
+        />
+        <label class="form__label" for="repoUrl">Repo URL</label>
+      </div>
+      <button class="btn btn--blue">Search &rarr;</button>
+    </form>
+  </div>
 </section>

@@ -1,0 +1,31 @@
+.section-landing-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 0;
+
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+}
+
+.search {
+  height: 50rem;
+  width: 70%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url('../images/colorado.jpg');
+  background-size: cover;
+  background-position: center center;
+
+  &__form {
+    width: 60%;
+    padding: 6rem;
+  }
+}
