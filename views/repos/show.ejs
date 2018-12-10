@@ -1,7 +1,10 @@
 <section class="section-repo">
   <h1>Repo show</h1>
   <% pullRequests.map(pr => { %>
-  <a href="<%= pr.html_url %>" target="_blank"><h2><%= pr.title %></h2></a>
+  <a href="<%= pr.html_url %>" target="_blank"
+    ><h2><%= pr.title %></h2>
+    <i class="fas fa-external-link-alt"></i
+  ></a>
   <div class="section-repo__user">
     <a href="<%= pr.user_url %>" target="_blank">
       <img src="<%= pr.avatar_url %>" alt="" width="100" />
