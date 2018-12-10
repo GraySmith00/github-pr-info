@@ -5,7 +5,8 @@
   "main": "start.js",
   "scripts": {
     "test": "jest --watch",
-    "dev": "nodemon start.js"
+    "sass": "node-sass public/stylesheets/sass/main.scss public/stylesheets/styles.css -w",
+    "dev": "nodemon start.js & npm run sass"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "node-sass": "^4.11.0"
   },
   "devDependencies": {
     "eslint": "^5.10.0",
