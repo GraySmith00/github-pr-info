@@ -22,7 +22,7 @@ class GithubRepo {
 
   [cleanPullRequests](pullRequests) {
     const unresolved = pullRequests.map(async pr => {
-      const { login, avatar_url, url: user_url } = pr.user;
+      const { login, avatar_url, html_url: user_url } = pr.user;
       const { commits_url, comments_url, title, html_url } = pr;
 
       const [commits, comments] = await Promise.all([
