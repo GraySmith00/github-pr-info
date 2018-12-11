@@ -24,7 +24,7 @@ exports.show = async (req, res) => {
     } = await repo.getPullRequests();
     const pageCount = parseInt(linkHeaders.last.page);
 
-    res.render('repos/show', {
+    res.status(200).render('repos/show', {
       pullRequests,
       linkHeaders,
       repoName,
