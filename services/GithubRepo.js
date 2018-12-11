@@ -19,7 +19,9 @@ class GithubRepo {
     const pullRequests = await response.json();
 
     // parse linkHeaders for pagination
-    const parsedLinkHeaders = parse(response.headers.get('link'));
+    const parsedLinkHeaders = parse(response.headers.get('link')) || {
+      last: { page: 1 }
+    };
     const cleanPRs = await this.cleanPullRequests(pullRequests);
 
     return {
