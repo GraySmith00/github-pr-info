@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --watch",
     "sass": "node-sass public/stylesheets/sass/main.scss public/stylesheets/styles.css -w",
-    "dev": "nodemon start.js & npm run sass"
+    "dev": "nodemon start.js & npm run sass",
+    "start": "node start.js & npm run sass"
   },
   "repository": {
     "type": "git",
