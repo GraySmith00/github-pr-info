@@ -27,7 +27,6 @@ exports.show = async (req, res) => {
 };
 
 exports.getRepoPage = async (req, res) => {
-  console.log(req.params);
   const { owner, repoName, page } = req.params;
 
   try {
