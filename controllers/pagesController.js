@@ -1,3 +1,3 @@
 exports.landingPage = (req, res) => {
-  res.render('pages/landing');
+  res.status(200).render('pages/landing');
 };
