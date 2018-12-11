@@ -4,8 +4,9 @@
   "description": "A node app for displaying Github repo pull request information",
   "main": "start.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon start.js"
+    "test": "jest --watch",
+    "sass": "node-sass public/stylesheets/sass/main.scss public/stylesheets/styles.css -w",
+    "dev": "nodemon start.js & npm run sass"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,14 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "node-sass": "^4.11.0",
+    "parse-link-header": "^1.0.1"
   },
   "devDependencies": {
+    "eslint": "^5.10.0",
+    "jest": "^23.6.0",
+    "jest-fetch-mock": "^2.0.1",
     "nodemon": "^1.18.7"
   }
 }

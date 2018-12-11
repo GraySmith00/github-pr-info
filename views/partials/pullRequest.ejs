@@ -1,0 +1,17 @@
+<div class="pr">
+  <div class="pr__user-image">
+    <a href="<%= pr.user_url %>" target="_blank">
+      <img src="<%= pr.avatar_url %>" alt="" width="100" />
+    </a>
+  </div>
+  <div class="pr__info">
+    <a href="<%= pr.html_url %>" target="_blank">
+      <h2 class="heading-tertiary"><%= pr.title %></h2>
+    </a>
+    <a href="<%= pr.user_url %>" target="_blank">@<%= pr.login %></a>
+    <div class="pr__numbers">
+      <p>Commits: <%= pr.numCommits %></p>
+      <p>Comments: <%= pr.numComments %></p>
+    </div>
+  </div>
+</div>

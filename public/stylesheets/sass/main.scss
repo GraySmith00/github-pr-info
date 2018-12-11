@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+@import 'abstracts/utils';
+@import 'abstracts/variables';
+
+@import 'base/typography';
+
+@import 'components/form';
+@import 'components/button';
+@import 'components/pullRequest';
+@import 'components/pagination';
+@import 'components/nav';
+
+@import 'pages/landing';
+@import 'pages/repoShow';

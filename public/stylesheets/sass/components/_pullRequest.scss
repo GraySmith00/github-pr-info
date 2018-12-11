@@ -1,0 +1,36 @@
+.pr {
+  display: flex;
+
+  padding: 3rem;
+  background-color: rgba($color-white, 0.7);
+  margin-bottom: 3rem;
+
+  color: $color-grey-dark-2;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  border-radius: 3px;
+
+  &__img {
+    border-radius: 3px;
+  }
+
+  &__info {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.8rem;
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+
+    & p:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+}
