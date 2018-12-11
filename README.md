@@ -2,6 +2,8 @@
 
 by Gray Smith
 
+<a href="https://gh-pr-info.herokuapp.com/">Live on Heroku</a>
+
 A simple Node/Express app for displaying Github Pull Request information.
 
 Landing Search Page
