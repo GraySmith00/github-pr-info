@@ -862,3 +862,24 @@ exports.mockComments = [
       'Thank you for signing our Contributor License Agreement. We can now accept your code for this (and any) Facebook open source project. Thanks!'
   }
 ];
+
+exports.mockLinkHeaders = {
+  next: {
+    client_id: '63b8f15ccb20d15e82e7',
+    client_secret: '6f0fed91d7b232480fecbba11d5eee8d5f2140d4',
+    per_page: '5',
+    page: '2',
+    rel: 'next',
+    url:
+      'https://api.github.com/repositories/63537249/pulls?client_id=63b8f15ccb20d15e82e7&client_secret=6f0fed91d7b232480fecbba11d5eee8d5f2140d4&per_page=5&page=2'
+  },
+  last: {
+    client_id: '63b8f15ccb20d15e82e7',
+    client_secret: '6f0fed91d7b232480fecbba11d5eee8d5f2140d4',
+    per_page: '5',
+    page: '15',
+    rel: 'last',
+    url:
+      'https://api.github.com/repositories/63537249/pulls?client_id=63b8f15ccb20d15e82e7&client_secret=6f0fed91d7b232480fecbba11d5eee8d5f2140d4&per_page=5&page=15'
+  }
+};

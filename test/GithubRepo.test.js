@@ -1,14 +1,14 @@
 const fetch = require('jest-fetch-mock');
 jest.setMock('node-fetch', fetch);
 
-const GithubRepo = require('../GithubRepo');
+const GithubRepo = require('../services/GithubRepo');
 const {
   mockPullRequests,
   mockPullRequests2,
   mockCommits,
   mockComments,
   mockCleanPullRequests
-} = require('../mockData');
+} = require('./mockData');
 
 describe('GithubRepo class', () => {
   let repo;
