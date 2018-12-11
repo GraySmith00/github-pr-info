@@ -4,18 +4,21 @@
     <h3 class="heading-sub-1 mb-3">by <%= owner %></h3>
     <% pullRequests.map(pr => { %>
     <div class="pr">
-      <a href="<%= pr.html_url %>" target="_blank"
-        ><h2><%= pr.title %></h2>
-        <i class="fas fa-external-link-alt"></i
-      ></a>
-      <div class="section-repo__user">
+      <div class="pr__user-image">
         <a href="<%= pr.user_url %>" target="_blank">
           <img src="<%= pr.avatar_url %>" alt="" width="100" />
-          <p><%= pr.login %></p>
         </a>
       </div>
-      <p>Commits: <%= pr.numCommits %></p>
-      <p>Comments: <%= pr.numComments %></p>
+      <div class="pr__info">
+        <a href="<%= pr.html_url %>" target="_blank">
+          <h2 class="heading-tertiary"><%= pr.title %></h2>
+        </a>
+        <a href="<%= pr.user_url %>" target="_blank">@<%= pr.login %></a>
+        <div class="pr__numbers">
+          <p>Commits: <%= pr.numCommits %></p>
+          <p>Comments: <%= pr.numComments %></p>
+        </div>
+      </div>
     </div>
     <% }) %>
   </div>
