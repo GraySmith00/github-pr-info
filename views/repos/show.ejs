@@ -3,10 +3,8 @@
     <h1 class="heading-primary"><%= repoName %></h1>
     <h3 class="heading-sub-1 mb-3">by <%= owner %></h3>
 
-    <% pullRequests.map(pr => { %>
-      <% include ../partials/pullRequest %>
-    <% }) %>
-    
+    <% pullRequests.map(pr => { %> <% include ../partials/pullRequest %> <% })
+    %>
   </div>
 
   <% include ../partials/pagination %>
