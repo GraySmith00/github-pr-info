@@ -4,53 +4,10 @@
     <h3 class="heading-sub-1 mb-3">by <%= owner %></h3>
 
     <% pullRequests.map(pr => { %>
-    <div class="pr">
-      <div class="pr__user-image">
-        <a href="<%= pr.user_url %>" target="_blank">
-          <img src="<%= pr.avatar_url %>" alt="" width="100" />
-        </a>
-      </div>
-      <div class="pr__info">
-        <a href="<%= pr.html_url %>" target="_blank">
-          <h2 class="heading-tertiary"><%= pr.title %></h2>
-        </a>
-        <a href="<%= pr.user_url %>" target="_blank">@<%= pr.login %></a>
-        <div class="pr__numbers">
-          <p>Commits: <%= pr.numCommits %></p>
-          <p>Comments: <%= pr.numComments %></p>
-        </div>
-      </div>
-    </div>
+      <% include ../partials/pullRequest %>
     <% }) %>
     
   </div>
 
-  <div class="pagination">
-    <a href="/<%= owner %>/repo/<%= repoName %>/page/1" class=
-    <% if (currentPage === 1) { %> 
-      "pagination__number pagination__current" 
-    <% } else { %> 
-      "pagination__number" 
-    <% } %>>
-      First
-    </a>
-    <% for(let i = 2; i < pageCount - 1; i++) { %> 
-      <a href="/<%= owner %>/repo/<%= repoName %>/page/<%= i %>" class=
-        <% if (i === currentPage) { %> 
-          "pagination__number pagination__current" 
-        <% } else { %> 
-          "pagination__number" 
-        <% } %>>
-        <%= i %>
-      </a>
-    <% } %>
-    <a href="/<%= owner %>/repo/<%= repoName %>/page/<%= pageCount - 1 %>" class=
-    <% if (currentPage === pageCount - 1) { %> 
-      "pagination__number pagination__current" 
-    <% } else { %> 
-      "pagination__number" 
-    <% } %>>
-      Last
-    </a>
-  </div>
+  <% include ../partials/pagination %>
 </section>

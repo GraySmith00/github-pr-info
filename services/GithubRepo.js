@@ -14,7 +14,7 @@ class GithubRepo {
       this.repo
     }/pulls?client_id=${process.env.CLIENT_ID}&client_secret=${
       process.env.CLIENT_SECRET
-    }&per_page=3&page=${this.page}`;
+    }&per_page=5&page=${this.page}`;
 
     const response = await fetch(url);
     const parsedLinkHeaders = parse(response.headers.get('link'));

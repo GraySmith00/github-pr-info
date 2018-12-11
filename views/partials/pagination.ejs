@@ -1,0 +1,28 @@
+<div class="pagination">
+    <a href="/<%= owner %>/repo/<%= repoName %>/page/1" class=
+    <% if (currentPage === 1) { %> 
+      "pagination__number pagination__current" 
+    <% } else { %> 
+      "pagination__number" 
+    <% } %>>
+      First
+    </a>
+    <% for(let i = 2; i < pageCount - 1; i++) { %> 
+      <a href="/<%= owner %>/repo/<%= repoName %>/page/<%= i %>" class=
+        <% if (i === currentPage) { %> 
+          "pagination__number pagination__current" 
+        <% } else { %> 
+          "pagination__number" 
+        <% } %>>
+        <%= i %>
+      </a>
+    <% } %>
+    <a href="/<%= owner %>/repo/<%= repoName %>/page/<%= pageCount - 1 %>" class=
+    <% if (currentPage === pageCount - 1) { %> 
+      "pagination__number pagination__current" 
+    <% } else { %> 
+      "pagination__number" 
+    <% } %>>
+      Last
+    </a>
+  </div>
