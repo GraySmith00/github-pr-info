@@ -147,6 +147,19 @@ body {
     .pr__numbers p:not(:first-child) {
       margin-left: 2rem; }
 
+.pagination__number {
+  padding: 1.3rem;
+  background-color: #3a3a3a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem; }
+
+.pagination__number:not(:last-child) {
+  border-right: 1px solid #999; }
+
+.pagination__current {
+  color: #57ff44; }
+
 .section-landing-search {
   display: flex;
   flex-direction: column;
@@ -172,7 +185,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15rem 0;
+  padding: 10rem 0;
   overflow: scroll;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/colorado2.jpg");
   height: 100vh; }
+
+.repo {
+  width: 70%; }

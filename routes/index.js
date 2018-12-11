@@ -9,5 +9,6 @@ const reposController = require('../controllers/reposController');
 router.get('/', pagesController.landingPage);
 
 router.get('/repo', reposController.show);
+router.get('/:owner/repo/:repoName/page/:page', reposController.getRepoPage);
 
 module.exports = router;

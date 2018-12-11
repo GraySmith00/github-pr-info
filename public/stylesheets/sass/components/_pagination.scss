@@ -1,0 +1,17 @@
+.pagination {
+  &__number {
+    padding: 1.3rem;
+    background-color: $color-grey-dark-2;
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1.4rem;
+  }
+
+  &__number:not(:last-child) {
+    border-right: 1px solid $color-grey-dark;
+  }
+
+  &__current {
+    color: #57ff44;
+  }
+}

@@ -21,7 +21,11 @@ class GithubRepo {
     const pullRequests = await response.json();
     const cleanPRs = await this[cleanPullRequests](pullRequests);
 
-    return { pullRequests: cleanPRs, linkHeaders: parsedLinkHeaders };
+    return {
+      pullRequests: cleanPRs,
+      linkHeaders: parsedLinkHeaders,
+      currentPage: parseInt(this.page)
+    };
   }
 
   [cleanPullRequests](pullRequests) {

@@ -6,13 +6,46 @@ exports.show = async (req, res) => {
 
   try {
     const repo = new GithubRepo(owner, repoName);
-    const { pullRequests, linkHeaders } = await repo.getPullRequests();
+    const {
+      pullRequests,
+      linkHeaders,
+      currentPage
+    } = await repo.getPullRequests();
+    const pageCount = parseInt(linkHeaders.last.page);
 
     res.render('repos/show', {
       pullRequests,
       linkHeaders,
       repoName,
-      owner
+      owner,
+      pageCount,
+      currentPage
+    });
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+exports.getRepoPage = async (req, res) => {
+  console.log(req.params);
+  const { owner, repoName, page } = req.params;
+
+  try {
+    const repo = new GithubRepo(owner, repoName, page);
+    const {
+      pullRequests,
+      linkHeaders,
+      currentPage
+    } = await repo.getPullRequests();
+    const pageCount = parseInt(linkHeaders.last.page);
+
+    res.render('repos/show', {
+      pullRequests,
+      linkHeaders,
+      repoName,
+      owner,
+      pageCount,
+      currentPage
     });
   } catch (error) {
     throw new Error(error);
