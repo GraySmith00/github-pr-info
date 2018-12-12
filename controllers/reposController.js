@@ -15,6 +15,10 @@ exports.show = async (req, res) => {
     page = req.params.page;
   }
 
+  if (!repoName || !owner) {
+    return res.redirect('/');
+  }
+
   try {
     const repo = new GithubRepo(owner, repoName, page);
     const {
@@ -32,7 +36,7 @@ exports.show = async (req, res) => {
       pageCount,
       currentPage
     });
-  } catch (error) {
-    throw new Error(error);
+  } catch (err) {
+    throw new Error(err);
   }
 };
