@@ -11,14 +11,14 @@ class GithubRepo {
     this.repo = repo;
     this.page = page;
   }
-
-  getPullRequests() {
-    return {
-      pullRequests: mockCleanPullRequests,
-      linkHeaders: mockLinkHeaders,
-      currentPage: 1
-    };
-  }
 }
+
+GithubRepo.prototype.getPullRequests = jest.fn().mockImplementation(() => {
+  return {
+    pullRequests: mockCleanPullRequests,
+    linkHeaders: mockLinkHeaders,
+    currentPage: 1
+  };
+});
 
 module.exports = GithubRepo;

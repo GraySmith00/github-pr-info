@@ -1,8 +1,5 @@
-const fetch = require('node-fetch');
-const mockGetMostPopular = require('../../services/getMostPopular');
+const { mockMostPopular } = require('../../test/mockData');
 
-const getMostPopular = async () => {
-  return mockGetMostPopular;
-};
+const getMostPopular = jest.fn().mockImplementation(() => mockMostPopular);
 
 module.exports = getMostPopular;
