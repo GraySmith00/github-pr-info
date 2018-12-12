@@ -1,0 +1,45 @@
+.pop-repo {
+  background-color: rgba($color-white, 0.8);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  font-size: 2rem;
+  width: 21.5rem;
+  transition: all 0.2s;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 2rem 5rem rgba($color-black, 0.4);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &__bottom {
+    padding: 2rem 0;
+    color: $color-grey-dark-2;
+
+    h4 {
+      text-transform: capitalize;
+      margin-bottom: 0.5rem;
+    }
+
+    .owner {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

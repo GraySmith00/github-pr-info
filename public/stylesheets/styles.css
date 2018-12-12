@@ -152,18 +152,21 @@ body {
     .pr__numbers p:not(:first-child) {
       margin-left: 2rem; }
 
-.pagination__number {
-  padding: 1.3rem;
-  background-color: #3a3a3a;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.4rem; }
-
-.pagination__number:not(:last-child) {
-  border-right: 1px solid #999; }
-
-.pagination__current {
-  color: #57ff44; }
+.pagination {
+  display: flex;
+  max-width: 90%;
+  min-height: 4.5rem;
+  overflow-x: scroll; }
+  .pagination__number {
+    padding: 1.3rem;
+    background-color: #3a3a3a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem; }
+  .pagination__number:not(:last-child) {
+    border-right: 1px solid #999; }
+  .pagination__current {
+    color: #57ff44; }
 
 .section-nav {
   display: flex;
@@ -187,6 +190,36 @@ body {
     font-family: 'Oleo Script', cursive; }
     .nav__brand i {
       margin-right: 1.5rem; }
+
+.pop-repo {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  width: 21.5rem;
+  transition: all 0.2s; }
+  .pop-repo:link, .pop-repo:visited {
+    text-decoration: none;
+    color: inherit; }
+  .pop-repo:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4); }
+  .pop-repo:active {
+    transform: translateY(1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .pop-repo__bottom {
+    padding: 2rem 0;
+    color: #3a3a3a; }
+    .pop-repo__bottom h4 {
+      text-transform: capitalize;
+      margin-bottom: 0.5rem; }
+    .pop-repo__bottom .owner {
+      font-style: italic;
+      margin-bottom: 1.5rem; }
+    .pop-repo__bottom p {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem; }
 
 .section-landing-hero {
   display: flex;
@@ -230,6 +263,24 @@ body {
   .search__form {
     width: 60%;
     padding: 6rem; }
+
+.section-most-popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 0;
+  color: #000;
+  background: linear-gradient(to bottom, rgba(40, 208, 255, 0.4), rgba(0, 150, 191, 0.8)), url("../../../images/colorado4.jpg");
+  background-size: cover;
+  background-position: bottom; }
+
+.most-popular {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 5rem;
+  grid-row-gap: 10rem;
+  width: 80%; }
 
 .section-repo {
   display: flex;

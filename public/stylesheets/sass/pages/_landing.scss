@@ -63,3 +63,28 @@
     padding: 6rem;
   }
 }
+
+.section-most-popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 0;
+  color: $color-black;
+  background: linear-gradient(
+      to bottom,
+      rgba($color-primary, 0.4),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../../../images/colorado4.jpg');
+  background-size: cover;
+  background-position: bottom;
+}
+
+.most-popular {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 5rem;
+  grid-row-gap: 10rem;
+  width: 80%;
+}

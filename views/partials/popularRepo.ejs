@@ -1,0 +1,9 @@
+<a href="/<%= repo.login %>/repo/<%= repo.repoName %>/page/1" class="pop-repo">
+  <img src="<%= repo.avatar_url %>" alt="avatar" width="100%" />
+  <div class="pop-repo__bottom">
+    <h4 class="pop-repo__name"><%= repo.repoName %></h4>
+    <p class="owner">by <%= repo.login %></p>
+    <p>Stargazers: <%= repo.stargazers_count %></p>
+    <p>Language: <%= repo.language %></p>
+  </div>
+</a>

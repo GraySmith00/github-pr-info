@@ -21,3 +21,9 @@
     </form>
   </div>
 </section>
+<section class="section-most-popular">
+  <div class="most-popular">
+    <% mostPopular.map(repo => { %> <% include ../partials/popularRepo %> <% })
+    %>
+  </div>
+</section>

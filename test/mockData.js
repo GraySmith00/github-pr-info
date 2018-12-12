@@ -883,3 +883,102 @@ exports.mockLinkHeaders = {
       'https://api.github.com/repositories/63537249/pulls?client_id=63b8f15ccb20d15e82e7&client_secret=6f0fed91d7b232480fecbba11d5eee8d5f2140d4&per_page=5&page=15'
   }
 };
+
+exports.mockMostPopular = [
+  {
+    repoName: 'freeCodeCamp',
+    html_url: 'https://github.com/freeCodeCamp/freeCodeCamp',
+    language: 'JavaScript',
+    stargazers_count: 296492,
+    login: 'freeCodeCamp',
+    avatar_url: 'https://avatars0.githubusercontent.com/u/9892522?v=4'
+  },
+  {
+    repoName: 'bootstrap',
+    html_url: 'https://github.com/twbs/bootstrap',
+    language: 'CSS',
+    stargazers_count: 129286,
+    login: 'twbs',
+    avatar_url: 'https://avatars0.githubusercontent.com/u/2918581?v=4'
+  },
+  {
+    repoName: 'vue',
+    html_url: 'https://github.com/vuejs/vue',
+    language: 'JavaScript',
+    stargazers_count: 121812,
+    login: 'vuejs',
+    avatar_url: 'https://avatars1.githubusercontent.com/u/6128107?v=4'
+  },
+  {
+    repoName: 'react',
+    html_url: 'https://github.com/facebook/react',
+    language: 'JavaScript',
+    stargazers_count: 117409,
+    login: 'facebook',
+    avatar_url: 'https://avatars3.githubusercontent.com/u/69631?v=4'
+  },
+  {
+    repoName: 'tensorflow',
+    html_url: 'https://github.com/tensorflow/tensorflow',
+    language: 'C++',
+    stargazers_count: 116472,
+    login: 'tensorflow',
+    avatar_url: 'https://avatars1.githubusercontent.com/u/15658638?v=4'
+  },
+  {
+    repoName: 'free-programming-books',
+    html_url: 'https://github.com/EbookFoundation/free-programming-books',
+    language: null,
+    stargazers_count: 114832,
+    login: 'EbookFoundation',
+    avatar_url: 'https://avatars0.githubusercontent.com/u/14127308?v=4'
+  },
+  {
+    repoName: 'awesome',
+    html_url: 'https://github.com/sindresorhus/awesome',
+    language: null,
+    stargazers_count: 97812,
+    login: 'sindresorhus',
+    avatar_url: 'https://avatars1.githubusercontent.com/u/170270?v=4'
+  },
+  {
+    repoName: 'You-Dont-Know-JS',
+    html_url: 'https://github.com/getify/You-Dont-Know-JS',
+    language: null,
+    stargazers_count: 92949,
+    login: 'getify',
+    avatar_url: 'https://avatars1.githubusercontent.com/u/150330?v=4'
+  },
+  {
+    repoName: 'd3',
+    html_url: 'https://github.com/d3/d3',
+    language: 'JavaScript',
+    stargazers_count: 80889,
+    login: 'd3',
+    avatar_url: 'https://avatars1.githubusercontent.com/u/1562726?v=4'
+  },
+  {
+    repoName: 'oh-my-zsh',
+    html_url: 'https://github.com/robbyrussell/oh-my-zsh',
+    language: 'Shell',
+    stargazers_count: 80491,
+    login: 'robbyrussell',
+    avatar_url: 'https://avatars2.githubusercontent.com/u/257?v=4'
+  },
+  {
+    repoName: 'javascript',
+    html_url: 'https://github.com/airbnb/javascript',
+    language: 'JavaScript',
+    stargazers_count: 79444,
+    login: 'airbnb',
+    avatar_url: 'https://avatars3.githubusercontent.com/u/698437?v=4'
+  },
+  {
+    repoName: 'gitignore',
+    html_url: 'https://github.com/github/gitignore',
+    language: null,
+    stargazers_count: 76266,
+    login: 'github',
+    avatar_url: 'https://avatars1.githubusercontent.com/u/9919?v=4'
+  }
+];
