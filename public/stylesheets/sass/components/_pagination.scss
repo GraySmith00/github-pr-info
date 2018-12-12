@@ -1,4 +1,9 @@
 .pagination {
+  display: flex;
+  max-width: 90%;
+  min-height: 4.5rem;
+  overflow-x: scroll;
+
   &__number {
     padding: 1.3rem;
     background-color: $color-grey-dark-2;
