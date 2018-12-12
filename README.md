@@ -13,3 +13,7 @@ Landing Search Page
 Repo Info Page
 
 <img src="https://i.imgur.com/6j9cRtP.png" alt="pr info" width="500" />
+
+Current Most Popular Repos
+
+<img src="https://i.imgur.com/ijPVHub.png" alt="pr info" width="500" />
